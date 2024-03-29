@@ -1,17 +1,31 @@
-class Main {
+import java.util.HashMap;
+import java.util.Map;
+
+public class Main {
     public static void main(String[] args) {
         int[] numeros = {5, 3, 4, 3, 5, 5, 3};
         System.out.println("Número não repetido: " + encontrarNumeroNaoRepetido(numeros));
     }
     
     public static int encontrarNumeroNaoRepetido(int[] numeros) {
-        int umNum = 0, doisNum = 0;
+        Map<Integer, Integer> mapa = new HashMap<>();
+        
+        // Conta a frequência de cada número no array
         for (int num : numeros) {
-            umNum = (umNum ^ num) & ~doisNum;
-            doisNum = (doisNum ^ num) & ~umNum;
+            mapa.put(num, mapa.getOrDefault(num, 0) + 1);
         }
-        return umNum;
+        
+        // Procura o número que não se repete exatamente três vezes
+        for (int num : numeros) {
+            if (mapa.get(num) != 3) {
+                return num;
+            }
+        }
+        
+        // Retorna -1 se nenhum número for encontrado
+        return -1;
     }
 }
+
 
 
