@@ -8,21 +8,17 @@ public class Main {
     }
     
     public static int encontrarNumeroNaoRepetido(int[] numeros) {
-        Map<Integer, Integer> mapa = new HashMap<>();
-        
-        // Conta a frequência de cada número no array
-        for (int num : numeros) {
+	     Map<Integer, Integer> mapa = new HashMap<>();
+     
+			for (int num : numeros) {
             mapa.put(num, mapa.getOrDefault(num, 0) + 1);
         }
-        
-        // Procura o número que não se repete exatamente três vezes
+       
         for (int num : numeros) {
             if (mapa.get(num) != 3) {
                 return num;
             }
         }
-        
-        // Retorna -1 se nenhum número for encontrado
         return -1;
     }
 }
