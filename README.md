@@ -2,7 +2,7 @@ Encontrar Número Não Repetido em um Array
 
 Este programa Java encontra o número que não se repete exatamente três vezes em um array de inteiros.
 
-Funcionamento
+Funcionamento: 
 O HashMap é utilizado para mapear cada número para sua respectiva contagem de ocorrências no array.
 Em seguida, o programa percorre o array para verificar a contagem de cada número.
 O primeiro número encontrado com uma contagem diferente de três é retornado como resultado.
