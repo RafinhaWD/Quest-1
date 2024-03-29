@@ -1,7 +1,7 @@
 Encontrar Número Não Repetido em um Array
 
 Este programa Java encontra o número que não se repete em um array de inteiros, 
-onde todos os outros números se repetem exatamente duas vezes.
+onde todos os outros números se repetem exatamente três vezes.
 
 Funcionamento do Algoritmo
 O algoritmo utiliza operadores bitwise (que seria uma forma mais eficiente de encontrar o numero não repetido usando o XOR (^) e AND (&).
