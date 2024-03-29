@@ -1,16 +1,18 @@
 class Main {
     public static void main(String[] args) {
-        int[] nums = {5, 3, 4, 3, 5, 5, 3};
-        System.out.println("Número não repetido: " + encontrarNumeroNaoRepetido(nums));
+        int[] numeros = {5, 3, 4, 3, 5, 5, 3};
+        System.out.println("Número não repetido: " + encontrarNumeroNaoRepetido(numeros));
     }
     
-    public static int encontrarNumeroNaoRepetido(int[] nums) {
-        int ones = 0, twos = 0;
-        for (int num : nums) {
-            ones = (ones ^ num) & ~twos;
-            twos = (twos ^ num) & ~ones;
+    public static int encontrarNumeroNaoRepetido(int[] numeros) {
+        
+
+		int 1num = 0, 2num = 0;
+		  for (int num : numeros) {
+            1num = (1num ^ num) & ~2num;
+            2num = (2num ^ num) & ~1num;
         }
-        return ones;
+        return 1num;
     }
 }
 
