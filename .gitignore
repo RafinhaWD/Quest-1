@@ -5,14 +5,13 @@ class Main {
     }
     
     public static int encontrarNumeroNaoRepetido(int[] numeros) {
-        
-
-		int 1num = 0, 2num = 0;
-		  for (int num : numeros) {
-            1num = (1num ^ num) & ~2num;
-            2num = (2num ^ num) & ~1num;
+        int umNum = 0, doisNum = 0;
+        for (int num : numeros) {
+            umNum = (umNum ^ num) & ~doisNum;
+            doisNum = (doisNum ^ num) & ~umNum;
         }
-        return 1num;
+        return umNum;
     }
 }
+
 
